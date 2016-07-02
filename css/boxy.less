@@ -1,13 +1,9 @@
 html {
-    font-family: Helvetica, Arial, sans-serif;
-    color: white;
-    font-size: 14px;
-    /* line-height: 1.4; */
     height: 100%;
 }
 
 a {
-    color:white;
+    color: white;
     text-decoration: none;
 }
 
@@ -24,41 +20,45 @@ section {
     transition-duration: .3s;
 }
 
-header {
-    padding: 0.5em;
-    background-color: #374576;
-}
-
-main {
-    background-color: #F44336;
-    padding: 0.5em;
-}
-
-footer {
-    background-color: #1B5E20;
-    padding: 0.5em;
+ul {
+    padding: 0em;
+    margin: 0em;
+    li {
+        list-style-type: none;
+        margin-bottom: -1px;
+    }
 }
 
 .full-height {
     height: 100%;
 }
+
 .flex {
     flex: 1;
 }
+
 .flex-row {
     display: flex;
     flex-direction: row;
 }
+
 .flex-col, .flex-column {
     display: flex;
     flex-direction: column;
 }
+
 .scroll {
     overflow: scroll;
 }
-.padding {
-    padding: 0.5em;
+
+.space-between {
+    justify-content: space-between;
 }
+
+
+
+
+/*
 nav {
     align-items: center;
 }
@@ -69,7 +69,7 @@ nav > * {
 
 nav > *:last-child {
     margin-right: 0;
-}
+}*/
 
 ::-webkit-scrollbar {
     width: 0.5em;

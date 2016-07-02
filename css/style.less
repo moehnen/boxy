@@ -1,0 +1,58 @@
+@padding: 1em;
+// Triadic structure
+@color-base : #ddd;
+@color-primary :@color-base;
+@color-secondary : spin(@color-base, -(360 / 3));
+@color-tertiary :spin(@color-base, (360 / 3));
+@color-background: #FEFEFE;
+@color-background-active: @color-tertiary;
+@color-header: #212A34;
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+html {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    background-color: @color-background;
+    color: contrast(@color-background);
+    font-size: 14px;
+    /* line-height: 1.4; */
+    height: 100%;
+}
+
+.padding {
+    padding: @padding;
+}
+
+main {
+    padding: @padding;
+}
+
+header {
+    background-color: @color-header;
+    color: contrast(@color-header);
+    padding: @padding;
+}
+
+footer {
+    background-color: @color-header;
+    color: contrast(@color-header);
+    padding: @padding;
+}
+
+li {
+    padding: @padding;
+    border: 1px solid darken(@color-background, 10%);
+    margin-bottom: -1px;
+    &.active {
+        background-color: @color-background-active;
+        color: contrast(@color-background-active);
+        .muted {
+            color : lighten(contrast(@color-background-active),50%)
+        }
+    }
+}
+
+input {
+    padding: 2px;
+    border: 1px solid darken(@color-background, 10%);
+    margin-bottom: 0.5em;
+}
