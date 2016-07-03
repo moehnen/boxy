@@ -6,8 +6,7 @@
 @color-tertiary :spin(@color-base, (360 / 3));
 @color-background: #FEFEFE;
 @color-background-active: @color-tertiary;
-@color-header: #212A34;
-
+@color-header: #092f58;
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 html {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -23,7 +22,7 @@ html {
 }
 
 main {
-    padding: @padding;
+    xpadding: @padding;
 }
 
 header {
@@ -46,7 +45,7 @@ li {
         background-color: @color-background-active;
         color: contrast(@color-background-active);
         .muted {
-            color : lighten(contrast(@color-background-active),50%)
+            color: lighten(contrast(@color-background-active), 50%)
         }
     }
 }
@@ -55,4 +54,14 @@ input {
     padding: 2px;
     border: 1px solid darken(@color-background, 10%);
     margin-bottom: 0.5em;
+}
+
+button {
+    padding: (@padding/2) @padding;
+    background: none;
+    border: 1px solid darken(@color-background, 10%);
+    cursor: pointer;
+    &:hover {
+        background-color: @color-background-active;
+    }
 }
